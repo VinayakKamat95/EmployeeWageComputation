@@ -11,6 +11,8 @@ NUM_WORKING_DAYS=20;
 totalEmpHrs=0;
 totalWorkingDays=0;
 
+declare -A dailywage
+
 function getWorkingHrs() {
 
 
@@ -50,3 +52,5 @@ done
 totalsalary=$(($EMP_RATE_PER_HR*$totalEmpHrs));
 
 echo "Daily wage :" ${dailyWage[@]}
+
+echo "Day :" ${!dailyWage[@]}
